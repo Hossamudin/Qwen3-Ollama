@@ -1,0 +1,104 @@
+// This is the config.json for Cursor AI. It is a JSON file that contains the configuration for the Cursor AI server. The configuration file specifies the models that Cursor AI will use, the context providers that Cursor AI will use, the slash commands that Cursor AI will support, the embeddings provider that Cursor AI will use, and the reranker that Cursor AI will use. The configuration file also specifies the tab autocomplete model that Cursor AI will use.
+{
+  "models": [
+    {
+      "title": "qwen3:32b",
+      "provider": "ollama",
+      "apiBase": "http://localhost:11434/",
+      "model": "qwen3:32b",
+      "systemMessage": "You are an expert software developer. You give helpful and concise responses."
+    },
+    {
+      "title": "gemma3:27b",
+      "provider": "ollama",
+      "apiBase": "http://localhost:11434/",
+      "model": "gemma3:27b",
+      "systemMessage": "You are an expert software developer. You give helpful and concise responses."
+    },
+    {
+      "title": "qwq:32b",
+      "provider": "ollama",
+      "apiBase": "http://localhost:11434/",
+      "model": "qwq:32b",
+      "systemMessage": "You are an expert software developer. You give helpful and concise responses."
+    },
+        {
+      "title": "deepseek-r1:32b",
+      "provider": "ollama",
+      "apiBase": "http://localhost:11434/",
+      "model": "deepseek-r1:32b",
+      "systemMessage": "You are an expert software developer. You give helpful and concise responses."
+    },
+    {
+      "title": "aya-expanse:8b",
+      "provider": "ollama",
+      "apiBase": "http://localhost:11434/",
+      "model": "aya-expanse:8b",
+      "systemMessage": "You are an expert software developer. You give helpful and concise responses."
+    },
+    {
+      "title": "deepseek-r1:14b",
+      "provider": "ollama",
+      "apiBase": "http://localhost:11434/",
+      "model": "deepseek-r1:14b",
+      "systemMessage": "You are an expert software developer. You give helpful and concise responses."
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "Tab Autocomplete",
+    "apiBase": "http://localhost:11434/",
+    "provider": "ollama",
+    "model": "deepseek-coder:6.7b",
+    "systemMessage": "You are an expert software developer. You give helpful and concise responses."
+  },
+  "contextProviders": [
+    {
+      "name": "code",
+      "params": {}
+    },
+    {
+      "name": "docs",
+      "params": {}
+    },
+    {
+      "name": "diff",
+      "params": {}
+    },
+    {
+      "name": "terminal",
+      "params": {}
+    },
+    {
+      "name": "problems",
+      "params": {}
+    },
+    {
+      "name": "folder",
+      "params": {}
+    },
+    {
+      "name": "codebase",
+      "params": {}
+    }
+  ],
+  "slashCommands": [
+    {
+      "name": "share",
+      "description": "Export the current chat session to markdown"
+    },
+    {
+      "name": "cmd",
+      "description": "Generate a shell command"
+    },
+    {
+      "name": "commit",
+      "description": "Generate a git commit message"
+    }
+  ],
+  "embeddingsProvider": {
+    "provider": "free-trial"
+  },
+  "reranker": {
+    "name": "free-trial"
+  }
+}
