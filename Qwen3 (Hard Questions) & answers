@@ -1,3 +1,7 @@
+Model used: Qwen 32b directly through ollama. Accessed the model using Anything LLM.
+https://ollama.com/
+https://anythingllm.com/
+
 #1 Question: Generate ten sentences ending in apple.	
 
 Thinking: 
