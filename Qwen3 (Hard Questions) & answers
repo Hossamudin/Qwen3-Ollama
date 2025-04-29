@@ -2,6 +2,10 @@ Model used: Qwen 32b directly through ollama. Accessed the model using Anything 
 https://ollama.com/
 https://anythingllm.com/
 
+on a macbook m4 max (48GB of ram).
+
+Speed: 10 to 17 tokens per second (without power plug).
+
 #1 Question: Generate ten sentences ending in apple.	
 
 Thinking: 
