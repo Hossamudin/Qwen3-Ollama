@@ -1,0 +1,242 @@
+Qwen 3 Writing HTMl, CSs and JS landing page for Hossamudin Hassan.
+
+#Prompt:
+I would like to create an engaging high quality landing page (ai theme) for Hossamudin hassan. The ai expert. I need it to be multilingual (Ar / En). Note AR should be RTL. I need at least 7 sections. Context: Hossamudin’s Bio:
+
+bio hossamudin
+Hossamudin Hassan A Muslim, Egyptian, Entrepreneur & Founder/CEO of Sparkling Business Solutions LLC FZ.
+
+Hossamudin Hassan, an alumnus of Zewail City of Science and Technology with a specialization in Nanomedicine with a strong background, and passion towards entrepreneurship and technology. He is the innovative force behind Sparkling Business Solutions LLC, a UAE based company focusing on revolutionizing business through technology. As a pioneer in educational and technical content, Hossamudin leads the ePreneurs YouTube channel and Ta3allam Online, where he delivers cutting-edge VR and AI-related, and educational content. Total followers of 402K+.
+
+His videos have reached millions worldwide, and he has extensive experience in video production and digital marketing. Hossamudin leads a professional team of seven pioneers. As a media expert, he coached and trained an American team helping them achieve a high rank in the "INSPIRE AWARD” Season 2020-2021.
+
+Hossamudin has educated over 5,700 trainees globally on platforms like Udemy and Khabeer Online, focusing on video production, freelancing, and applications of AI on daily lives and 360° and 3D photography.
+
+#Main links of Hossamudin hassan: Virtual Card: https://epreneurs.link/vCard YouTube: https://www.youtube.com/@ePreneurs Linkedin Profile: https://www.linkedin.com/in/hossamudin/ Khabeer Online website: https://Khabeer.Online/ Khabeer online Facebook: https://www.facebook.com/KhabeerOnline/ Tik Tok: https://www.tiktok.com/@hossamudinepreneurs Udemy: https://khaber.online/UdemyAllCourses
+
+use Html, css and js in one file.
+
+
+#Result code:
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hossamudin Hassan | AI Expert</title>
+    <style>
+        :root {
+            --primary: #00f0ff;
+            --dark: #111;
+            --light: #fff;
+            --accent: #ff0055;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: var(--dark);
+            color: var(--light);
+            transition: direction 0.3s;
+        }
+
+        .rtl {
+            direction: rtl;
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        header {
+            padding: 20px;
+            background: var(--accent);
+            text-align: center;
+        }
+
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .language-switcher {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin: 5px;
+            background: var(--primary);
+            border: none;
+            color: var(--dark);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .social a {
+            display: inline-block;
+            margin: 10px;
+            color: var(--primary);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <button class="btn" onclick="setLanguage('en')">English</button>
+        <button class="btn" onclick="setLanguage('ar')">العربية</button>
+    </div>
+
+    <header>
+        <h1 id="header-title">Hossamudin Hassan</h1>
+        <p id="header-subtitle">AI Expert & Entrepreneur</p>
+    </header>
+
+    <section id="about">
+        <h2 id="about-title">About</h2>
+        <p id="about-text">
+            Hossamudin Hassan, an Egyptian entrepreneur with a background in Nanomedicine and AI...
+        </p>
+    </section>
+
+    <section id="services">
+        <h2 id="services-title">Services</h2>
+        <ul id="services-list">
+            <li>AI Solutions</li>
+            <li>VR/3D Content Creation</li>
+            <li>Digital Marketing</li>
+            <li>Entrepreneurship Training</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2 id="projects-title">Projects</h2>
+        <div class="social" id="projects-links">
+            <a href="https://www.youtube.com/@ePreneurs" target="_blank">ePreneurs YouTube</a>
+            <a href="https://Khabeer.Online/" target="_blank">Khabeer Online</a>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2 id="testimonials-title">Testimonials</h2>
+        <blockquote id="testimonial-text">
+            "Hossamudin's AI training transformed my business..."
+        </blockquote>
+    </section>
+
+    <section id="contact">
+        <h2 id="contact-title">Contact</h2>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/hossamudin/" target="_blank">LinkedIn</a>
+            <a href="https://www.tiktok.com/@hossamudinepreneurs" target="_blank">TikTok</a>
+            <a href="https://epreneurs.link/vCard" target="_blank">Virtual Card</a>
+        </div>
+    </section>
+
+    <script>
+        const content = {
+            en: {
+                header: {
+                    title: "Hossamudin Hassan",
+                    subtitle: "AI Expert & Entrepreneur"
+                },
+                about: {
+                    title: "About",
+                    text: "Hossamudin Hassan, an Egyptian entrepreneur with a background in Nanomedicine and AI. Founder of Sparkling Business Solutions LLC FZ, leading ePreneurs YouTube channel with 402K+ followers..."
+                },
+                services: {
+                    title: "Services",
+                    list: ["AI Solutions", "VR/3D Content Creation", "Digital Marketing", "Entrepreneurship Training"]
+                },
+                projects: {
+                    title: "Projects",
+                    links: [
+                        { text: "ePreneurs YouTube", url: "https://www.youtube.com/@ePreneurs" },
+                        { text: "Khabeer Online", url: "https://Khabeer.Online/" }
+                    ]
+                },
+                testimonials: {
+                    title: "Testimonials",
+                    text: "\"Hossamudin's AI training transformed my business...\""
+                },
+                contact: {
+                    title: "Contact",
+                    social: [
+                        { text: "LinkedIn", url: "https://www.linkedin.com/in/hossamudin/" },
+                        { text: "TikTok", url: "https://www.tiktok.com/@hossamudinepreneurs" },
+                        { text: "Virtual Card", url: "https://epreneurs.link/vCard" }
+                    ]
+                }
+            },
+            ar: {
+                header: {
+                    title: "هشام الدين حسن",
+                    subtitle: "خبير الذكاء الاصطناعي ورائد الأعمال"
+                },
+                about: {
+                    title: "عن",
+                    text: "هشام الدين حسن، رائد أعمال مصري بخلفية في النانو الطب و الذكاء الاصطناعي. مؤسس شركة Sparkling Business Solutions LLC FZ، وقائد قناة ePreneurs على اليوتيوب مع أكثر من 402 ألف متابع..."
+                },
+                services: {
+                    title: "الخدمات",
+                    list: ["حلول الذكاء الاصطناعي", "إنشاء محتوى VR/3D", "التسويق الرقمي", "تدريب ريادة الأعمال"]
+                },
+                projects: {
+                    title: "المشاريع",
+                    links: [
+                        { text: "قناة ePreneurs", url: "https://www.youtube.com/@ePreneurs" },
+                        { text: "Khabeer Online", url: "https://Khabeer.Online/" }
+                    ]
+                },
+                testimonials: {
+                    title: "الشهادات",
+                    text: "\"حولت تدريبات الذكاء الاصطناعي لهشام الدين مشروعنا...\""
+                },
+                contact: {
+                    title: "اتصل بنا",
+                    social: [
+                        { text: "LinkedIn", url: "https://www.linkedin.com/in/hossamudin/" },
+                        { text: "TikTok", url: "https://www.tiktok.com/@hossamudinepreneurs" },
+                        { text: "البطاقة الافتراضية", url: "https://epreneurs.link/vCard" }
+                    ]
+                }
+            }
+        };
+
+        function setLanguage(lang) {
+            const dir = lang === 'ar' ? 'rtl' : 'ltr';
+            document.body.setAttribute('dir', dir);
+            document.body.classList.toggle('rtl', lang === 'ar');
+            
+            const langContent = content[lang];
+            
+            document.getElementById('header-title').textContent = langContent.header.title;
+            document.getElementById('header-subtitle').textContent = langContent.header.subtitle;
+            
+            document.getElementById('about-title').textContent = langContent.about.title;
+            document.getElementById('about-text').textContent = langContent.about.text;
+            
+            document.getElementById('services-title').textContent = langContent.services.title;
+            const servicesList = document.getElementById('services-list');
+            servicesList.innerHTML = langContent.services.list.map(item => `<li>${item}</li>`).join('');
+            
+            document.getElementById('projects-title').textContent = langContent.projects.title;
+            const projectsLinks = document.getElementById('projects-links');
+            projectsLinks.innerHTML = langContent.projects.links.map(link => 
+                `<a href="${link.url}" target="_blank">${link.text}</a>`
+            ).join('');
+            
+            document.getElementById('testimonials-title').textContent = langContent.testimonials.title;
+            document.getElementById('testimonial-text').textContent = langContent.testimonials.text;
+            
+            document.getElementById('contact-title').textContent = langContent.contact.title;
+            const socialLinks = document.querySelector('.social');
+            socialLinks.innerHTML = langContent.contact.social.map(link => 
+                `<a href="${link.url}" target="_blank">${link.text}</a>`
+            ).join('');
+        }
+    </script>
+</body>
+</html>
