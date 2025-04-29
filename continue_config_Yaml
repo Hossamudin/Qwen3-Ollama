@@ -1,0 +1,60 @@
+name: Local Assistant
+version: 1.0.0
+schema: v1
+
+models:
+  - name: Qwen3 32B
+    provider: ollama
+    model: qwen3:32b
+    roles:
+      - chat
+      - edit
+      - apply
+
+  - name: Gemma3 27B
+    provider: ollama
+    model: gemma3:27b
+    roles:
+      - chat
+      - edit
+
+  - name: Qwq 32B
+    provider: ollama
+    model: qwq:32b
+    roles:
+      - chat
+
+  - name: Nomic Embed
+    provider: ollama
+    model: nomic-embed-text:latest
+    roles:
+      - embed
+
+  - name: Deepseek R1 32B
+    provider: ollama
+    model: deepseek-r1:32b
+    roles:
+      - chat
+      - edit
+      - apply
+
+  - name: Aya Expanse 8B
+    provider: ollama
+    model: aya-expanse:8b
+    roles:
+      - chat
+
+  - name: Deepseek R1 14B
+    provider: ollama
+    model: deepseek-r1:14b
+    roles:
+      - chat
+
+context:
+  - provider: code
+  - provider: docs
+  - provider: diff
+  - provider: terminal
+  - provider: problems
+  - provider: folder
+  - provider: codebase
