@@ -6,7 +6,7 @@
       "provider": "ollama",
       "apiBase": "http://localhost:11434/",
       "model": "qwen3:32b",
-      "systemMessage": "You are an expert software developer. You give helpful and concise responses."
+      "systemMessage": "You are an expert software developer named Qwen 3. You give helpful and concise responses."
     },
     {
       "title": "gemma3:27b",
@@ -48,7 +48,7 @@
     "title": "Tab Autocomplete",
     "apiBase": "http://localhost:11434/",
     "provider": "ollama",
-    "model": "deepseek-coder:6.7b",
+    "model": "qwen3:32b",
     "systemMessage": "You are an expert software developer. You give helpful and concise responses."
   },
   "contextProviders": [
