@@ -1,0 +1,168 @@
+{
+  "name": "My workflow 3",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "ae3be075-981c-4ec5-9d6b-bc64a099b5fb",
+      "name": "When chat message received",
+      "webhookId": "c84fa9ab-c499-480c-b237-52643cf83b80"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a helpful agent.\ngmail tool is used to send emails."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.8,
+      "position": [
+        220,
+        0
+      ],
+      "id": "cc1ab02f-ca9c-4f98-aa3a-18bc4e5cdefb",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "mistralai/mistral-small-3.1-24b-instruct:free",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        260,
+        220
+      ],
+      "id": "47de3bac-031f-4328-a3f1-0bfce81f6dfb",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "7dz9XiBifha8ZW1H",
+          "name": "OpenRouter account 3"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
+      "typeVersion": 1,
+      "position": [
+        560,
+        220
+      ],
+      "id": "7ce47997-108a-4bed-a225-a4cded30c801",
+      "name": "Wikipedia"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        440,
+        240
+      ],
+      "id": "03b521f0-687b-4bf3-bdcf-1462e99a34a3",
+      "name": "Calculator"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $fromAI('To', ``, 'string') }}",
+        "subject": "={{ $fromAI('Subject', ``, 'string') }}",
+        "message": "={{ $fromAI('Message', ``, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        680,
+        160
+      ],
+      "id": "66be59bf-5e0f-4ae2-9bf2-2052da5996cc",
+      "name": "Gmail",
+      "webhookId": "cf6e389c-4794-4615-b514-8b8e810c7165",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "z741cUnvqwLKvhqt",
+          "name": "Gmail account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wikipedia": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "8a0aabc0-6745-4787-a43c-d29473f44184",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "1c6fe1f86c2c8dcb4e3a7cd79c80882fb06f5ccb9ad56fc10285b4ecd3888265"
+  },
+  "id": "DGlmZG34DAPQSchQ",
+  "tags": []
+}
